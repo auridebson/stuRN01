@@ -11,6 +11,7 @@ export default function() {
                 style={styles.caixas}
                 value={nome}
                 onChangeText={text=>setNome(text)}
+                autoCapitalize="sentences"
 
             />
             <Text>Nome digitado: {nome}</Text>

@@ -13,6 +13,7 @@ export default function() {
                 onChangeText={text=>setNome(text)}
 
             />
+            <Text>Nome digitado: {nome}</Text>
         </View>
     )
 }

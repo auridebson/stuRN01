@@ -1,11 +1,18 @@
-import React from "react";
-import { StyleSheet,View,TextInput,Text, Button } from "react-native";
+import React, {useState} from "react";
+import { StyleSheet,View,TextInput,Text } from "react-native";
 
 export default function() {
+    const [nome, setNome]=useState("Nome")
+    const mudarNome=()=>{}
+
     return(
         <View>
-            <Text style={styles.textos}>Login:</Text>
-            <TextInput style={styles.caixas}></TextInput>
+            <TextInput 
+                style={styles.caixas}
+                value={nome}
+                onChangeText={text=>setNome(text)}
+
+            />
         </View>
     )
 }
@@ -13,12 +20,12 @@ export default function() {
 const styles = StyleSheet.create({
     container: {
       flex: 1,
+      display: 'flex',
       backgroundColor: '#eee',
       alignItems: 'center',
       justifyContent: 'center',
     },
     textos: {
-        backgroundColor: '#cc3',
         alignItems: 'center',
         justifyContent: 'center',
         fontSize: 24,
